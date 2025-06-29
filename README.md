@@ -1,48 +1,69 @@
-# 🚀 Model Context API Tutorial — Learn with Sumit
+# Calendar MCP Server
 
-Welcome to the official source code repository for the **Model Context Protocol Tutorial** on [YouTube](https://youtube.com/@LearnwithSumit). This video is designed to help you get started with **Model Context Protocol (MCP)** — a powerful future-ready technology to connect external context to your AI application.
+A Model Context Protocol (MCP) server that provides access to Google Calendar data through a simple API.
 
-🎬 **Watch the full tutorial:**
-👉 [Model Context Protocol Tutorial on YouTube](https://youtu.be/7HjDcv75spg)
+## Description
 
----
+This MCP server allows you to retrieve calendar events for a specific date using Google Calendar API integration. It's built with Node.js and the MCP SDK.
 
-## 📚 What You’ll Learn
+## Features
 
-This video covers:
+- Retrieve calendar events for a specific date
+- Google Calendar API integration
+- MCP-compatible tool interface
 
--   ✅ What is MCP and how it works
--   ✅ What is MCP Server, why we use it and how to use it
--   ✅ Real life code example
+## Prerequisites
 
----
+- Node.js (version 14 or higher)
+- Google Calendar API credentials
+- A Google Calendar ID
 
-## 🧑‍💻 Tech Stack
+## Installation
 
--   [Model Context Protocol Doc](https://modelcontextprotocol.io)
+1. Clone or download this repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
----
+## Configuration
 
-## 🤝 Contribution
+1. Create a `.env` file in the root directory
+2. Add your Google API credentials:
+   ```
+   GOOGLE_PUBLIC_API_KEY=your_google_api_key_here
+   CALENDAR_ID=your_calendar_id_here
+   ```
 
-This repository is primarily for educational purposes based on the YouTube crash course. Feel free to fork the project, submit issues, or make improvements for your own learning!
+## Usage
 
----
+### Starting the Server
 
-## 🧠 Author
+```bash
+npm start
+```
 
-**Sumit Saha** — [Learn with Sumit](https://youtube.com/@LearnwithSumit)
-📧 [sumit@learnwithsumit.com](mailto:sumit@learnwithsumit.com)
-🌐 [learnwithsumit.com](https://learnwithsumit.com)
+### Using the Tool
 
----
+The server provides a tool called `getMyCalendarDataByDate` that accepts a date parameter and returns calendar events for that date.
 
-## ⭐ Show Your Support
+**Parameters:**
+- `date`: A valid date string (e.g., "2024-01-15")
 
-If this crash course helped you, please:
+**Returns:**
+- JSON object containing meetings/events for the specified date
 
--   ⭐ Star this repo
--   🍿 Subscribe on [YouTube](https://youtube.com/@LearnwithSumit)
--   🧑‍🏫 Share it with others!
+## Dependencies
 
----
+- `@modelcontextprotocol/sdk`: MCP SDK for server implementation
+- `dotenv`: Environment variable management
+- `googleapis`: Google APIs client library
+- `zod`: Schema validation
+
+## License
+
+ISC
+
+## Author
+
+Nahid 
